@@ -1,0 +1,10 @@
+{% extends "flatpages/default.html" %}
+
+{% block content %}
+<div class="alert alert-success shadow-sm" role="alert">
+    <h2 class="alert-heading h4">Доступ разрешён</h2>
+    <p>{{ flatpage.content }}</p>
+    <hr>
+    <p class="mb-0">Вы вошли как <strong>{{ request.user.username }}</strong>. Эта URL защищена проверкой staff/admin.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход | SkillFactory Django</title>
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body class="bg-light">
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4 p-lg-5">
+                    <h1 class="h3 mb-4">Вход</h1>
+                    {% if form.errors %}
+                        <div class="alert alert-danger">Неверное имя пользователя или пароль.</div>
+                    {% endif %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label" for="id_username">Имя пользователя</label>
+                            <input class="form-control" type="text" name="username" autofocus required id="id_username">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="id_password">Пароль</label>
+                            <input class="form-control" type="password" name="password" required id="id_password">
+                        </div>
+                        {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+                        <button class="btn btn-primary w-100" type="submit">Войти</button>
+                    </form>
+                    <a class="d-inline-block mt-3" href="/about/">Вернуться на сайт</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

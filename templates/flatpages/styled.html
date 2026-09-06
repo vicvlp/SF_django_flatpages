@@ -1,0 +1,19 @@
+{% extends "flatpages/default.html" %}
+
+{% block content %}
+<section class="styled-page">
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4 p-lg-5">
+            <h2 class="styled-title mb-3">Первый вывод content</h2>
+            <p class="styled-lead mb-0">{{ flatpage.content }}</p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-4 p-lg-5">
+            <h2 class="styled-subtitle mb-3">Второй вывод того же content</h2>
+            <p class="styled-copy mb-0">{{ flatpage.content }}</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

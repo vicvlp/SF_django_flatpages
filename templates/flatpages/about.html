@@ -1,0 +1,22 @@
+{% extends "flatpages/default.html" %}
+
+{% block content %}
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-4 p-lg-5">
+                <h2 class="h4 mb-3">Пользовательский контент FlatPage</h2>
+                <p class="lead mb-0">{{ flatpage.content }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card border-0 bg-dark text-white h-100">
+            <div class="card-body p-4">
+                <h2 class="h5">Что демонстрирует страница</h2>
+                <p class="mb-0">Наследование шаблонов, Bootstrap-компоненты и данные модели FlatPage.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
