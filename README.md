@@ -1,6 +1,6 @@
-# SkillFactory Django FlatPages - эталонный вариант
+# SkillFactory Django FlatPages
 
-Небольшой учебный Django-проект, собранный как однозначно проверяемый вариант задания по FlatPages, Bootstrap и static-файлам.
+Небольшой учебный Django-проект, вариант задания по FlatPages, Bootstrap и static-файлам.
 
 ## Что реализовано
 
@@ -23,7 +23,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Откройте:
+Открыть:
 
 - `http://127.0.0.1:8000/about/`
 - `http://127.0.0.1:8000/styled/`
